@@ -138,6 +138,37 @@
     margin:40px 0 100px 100px;
   }
 }
+      .warning{
+  position:relative;
+  top: 150px;
+  left:80px;
+      width:100px;
+      height: 100px;
+      animation-name: alert;
+      animation-duration: 2s;
+      animation-timing-function: ease-ease-in-out;
+      animation-iteration-count: infinite;
+}
+@keyframes alert {
+   0%{transform: rotate(0deg);}
+   25%{transform: rotate(90deg);}
+   50%{transform: rotate(180deg);}
+   75%{transform: rotate(270deg);}
+   100%{transform: rotate(360deg);}
+
+}
+.warning2{
+  position:relative;
+
+  left:80%;
+    top: 150px;
+      width:100px;
+      height: 100px;
+      animation-name: alert;
+      animation-duration: 2s;
+      animation-timing-function: ease-ease-in-out;
+      animation-iteration-count: infinite;
+}
 </style>
   </head>
   <body>
@@ -152,7 +183,8 @@
       </table>
 
     </div>
-
+         <img class="warning" src="warning.png" alt="warning">
+  <img class="warning2" src="warning.png" alt="warning">
     <div class="container">
           <form  action="spam.html" method="post">
                 <h1 class="hhover">Link</h1>
