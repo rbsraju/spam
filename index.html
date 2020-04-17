@@ -4,14 +4,19 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="s.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Sacramento&display=swap" rel="stylesheet">
+<script src="validation.js">
+
+</script>
     <title>Spam Detection</title>
     <style media="screen">
       * {
   box-sizing: border-box;
 }
       body{
-          background-image:linear-gradient(to bottom right ,#FFFFFF,#FFFFF0,#FFFAFA);
+          background-color:white;
           margin:0;
+          font-family: Montserrat;
       }
       .header1{
        width:100%;
@@ -27,6 +32,7 @@
       }
   h1.hidden{
       text-shadow: 1px 1px 2px #457967;
+
 
   }
 
@@ -52,6 +58,7 @@
         width: 40%;
         padding:10px;
         margin: 0% 20% 0 30%;
+
          background-color: white;
          border-radius:6px;
            background-color: rgba(0,0,0,0.2);
@@ -98,7 +105,7 @@
              margin-left:43%;
                  border-radius:6px;
                  color:white;
-
+                  outline:none;
                  background-color:#5FC48D ;
                  cursor: pointer;
       }
@@ -133,9 +140,9 @@
     width: 70%;
     margin-top: 0;
   }
- 
+
 }
-      .warning{
+.warning{
   position:relative;
   top: 150px;
   left:80px;
@@ -166,6 +173,22 @@
       animation-timing-function: ease-ease-in-out;
       animation-iteration-count: infinite;
 }
+#result1{
+ display:none;
+  color:red;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align:center;
+  font-size: 25px;
+}
+#result2{
+    display:none;
+  color:red;
+  font-weight: bold;
+  font-size: 25px;
+  text-align:center;
+  margin-bottom: 0;
+}
 </style>
   </head>
   <body>
@@ -180,18 +203,23 @@
       </table>
 
     </div>
-         <img class="warning" src="warning.png" alt="warning">
+  <img class="warning" src="warning.png" alt="warning">
   <img class="warning2" src="warning.png" alt="warning">
     <div class="container">
-          <form  action="index.html" method="post">
+
+
                 <h1 class="hhover">Link</h1>
                 <div class="col">
-                           <input type="url" name="website" placeholder="https://www.xyz.com"  pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$" required>
+                           <input type="url" name="website" placeholder="https://www.xyz.com" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$"
+                           id="user" required>
                 </div>
+
                 <div class="col">
-                  <button class="btn" type="submit" name="button">Find</button>
+                  <button class="btn" type="submit" name="button"  onclick="detect()">Find</button>
                 </div>
-         </form>
+                <p id="result1">GOOD</p>
+                <p id="result2">BAD</p>
+
     </div>
 
 
